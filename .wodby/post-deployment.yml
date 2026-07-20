@@ -1,0 +1,7 @@
+version: 0.1
+
+jobs:
+  fastapi-app-check:
+    steps:
+    - run: |
+        python -c 'from main import app; print(f"{app.title} loaded")'
