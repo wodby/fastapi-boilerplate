@@ -1,0 +1,26 @@
+[project]
+name = "fastapi-boilerplate"
+version = "0.1.0"
+description = "Minimal FastAPI application for Wodby"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "gunicorn>=23,<24",
+    "uvicorn-worker>=0.4,<1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2,<3",
+    "pytest>=8,<10",
+    "ruff>=0.12,<1",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
